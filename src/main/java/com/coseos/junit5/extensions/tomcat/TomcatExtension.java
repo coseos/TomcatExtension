@@ -24,18 +24,6 @@ import org.junit.jupiter.api.extension.ExtensionContext;
 
 /**  TomcatExtension
  * 
- * Usage:
- *
- * In your unit test class, add the extension as a static field with:
- * 
- * 	  @RegisterExtension
- *    static TomcatExtension tomcatExtension = TomcatExtension.builder()
- *        .host("localhost")
- *        .port(8070)
- *        .clazz(ReverseProxyServlet.class)
- *        .build();
- * 
- * You may also provide values for AppBase, DocBase, Context and Mappings.
  * 
  * Note:
  * 
@@ -92,7 +80,6 @@ public class TomcatExtension implements BeforeAllCallback, AfterAllCallback {
 	}
 	
 	public static class Builder {
-
 		private String host = "localhost";
 		private Class<?> clazz = DefaultServlet.class;
 		private int port = 8086;
